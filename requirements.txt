@@ -1,0 +1,6 @@
+streamlit
+tensorflow==2.15.0
+keras==2.15.0
+mtcnn==0.1.1
+opencv-python-headless
+numpy
