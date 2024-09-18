@@ -92,11 +92,11 @@ if uploaded_file is not None:
             with col2:
                 st.markdown(f"<h2 style='text-align: center;'>Hasil Deteksi</h2>", unsafe_allow_html=True)
                 st.markdown(f"<h3 style='text-align: center;'>Video ini terindikasi sebagai: {result}</h3>", unsafe_allow_html=True)
-                st.markdown(f"<h3 style='text-align: center;'>Akurasi: {accuracy:.2%}</h3>", unsafe_allow_html=True)
+            #     st.markdown(f"<h3 style='text-align: center;'>Akurasi: {accuracy:.2%}</h3>", unsafe_allow_html=True)
 
-            st.write("Probabilitas:")
-            st.write(f"Real: {real_prob:.2%}")
-            st.write(f"Fake: {fake_prob:.2%}")
+            # st.write("Probabilitas:")
+            # st.write(f"Real: {real_prob:.2%}")
+            # st.write(f"Fake: {fake_prob:.2%}")
 
         except ValueError as e:
             st.error(str(e))
