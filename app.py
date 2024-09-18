@@ -43,12 +43,13 @@ def preprocess_video(video_file):
                 normalized_frame = resized_frame / 255.0
                 frames_list.append(normalized_frame)
 
-                # tampilkan frame yang diproses
-                with cols[i % 5]: 
-                    st.image(cv2.cvtColor(face_frame, cv2.COLOR_BGR2RGB), caption=f"Frame {frame_number}", width=150)
+            # tampilkan frame yang diproses
+            with cols[i % 5]: 
+                st.image(cv2.cvtColor(face_frame, cv2.COLOR_BGR2RGB), caption=f"Frame {i + 1}", width=150)
 
             if len(frames_list) == SEQUENCE_LENGTH:
                 break
+
 
         video_reader.release()
 
@@ -70,7 +71,25 @@ if uploaded_file is not None:
     if st.button('Deteksi Video'):
         with st.spinner('Memproses...'):
             preprocessed_video = preprocess_video(uploaded_file)
-            prediction = model.predict(preprocessed_video)
-            result = CLASSES_LIST[int(prediction[0][0] > 0.5)]
+            prediction = model.predict(preprocessed_video)[0][0]
+            
+            # hitung probability
+            fake_prob = prediction
+            real_prob = 1 - prediction
+            
+            # hasil prob
+            result = "Fake" if fake_prob > 0.5 else "Real"
+            
+            accuracy = fake_prob if result == "Fake" else real_prob
 
-        st.write(f"Video ini terindikasi sebagai: {result}")
+        # hasil
+        col1, col2, col3 = st.columns([1,2,1])
+        with col2:
+            st.markdown(f"<h2 style='text-align: center;'>Hasil Deteksi</h2>", unsafe_allow_html=True)
+            st.markdown(f"<h3 style='text-align: center;'>Video ini terindikasi sebagai: {result}</h3>", unsafe_allow_html=True)
+        #     st.markdown(f"<h3 style='text-align: center;'>Akurasi: {accuracy:.2%}</h3>", unsafe_allow_html=True)
+
+        # # Tampilkan probabilitas untuk kedua kelas
+        # st.write("Probabilitas:")
+        # st.write(f"Real: {real_prob:.2%}")
+        # st.write(f"Fake: {fake_prob:.2%}")
