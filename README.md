@@ -76,8 +76,13 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 
 ## 🔬 Research and References
-
+### Research Problem References
+- [Quick Classification of Xception And Resnet-50 Models on Deepfake Video Using Local Binary Pattern](https://www.researchgate.net/publication/359585137_Quick_Classification_of_Xception_And_Resnet-50_Models_on_Deepfake_Video_Using_Local_Binary_Pattern)
+- [A Comparative Study of Deepfake Video Detection Method](https://informatika.stei.itb.ac.id/~rinaldi.munir/Penelitian/Makalah-ICOIACT-2020.pdf)
+- [Celeb-DF: A Large-scale Challenging Dataset for DeepFake Forensics](https://arxiv.org/abs/1909.12962)
+### Learning References
 - [Xception: Deep Learning with Depthwise Separable Convolutions](https://arxiv.org/abs/1610.02357)
-- [A Comparative Study of Deepfake Video Detection Method]([link-to-relevant-paper](https://informatika.stei.itb.ac.id/~rinaldi.munir/Penelitian/Makalah-ICOIACT-2020.pdf))
+- [Long Short-term Memory RNN](https://arxiv.org/abs/2105.06756)
+
 
 **Disclaimer**: This project is for educational and research purposes. Always use AI responsibly.
