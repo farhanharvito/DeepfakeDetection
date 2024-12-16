@@ -44,7 +44,7 @@ To launch the Streamlit application:
 ```bash
 streamlit run app.py
 ```
-You can download the pre-trained model [here](https://drive.google.com/file/d/1OdUT5LcZ-5znsWfihYRV8KDqiSY8NYRC/view?usp=drive_link)
+## You can download the pre-trained model [here](https://drive.google.com/file/d/1OdUT5LcZ-5znsWfihYRV8KDqiSY8NYRC/view?usp=drive_link)
 
 ## 📊 Model Performance
 
