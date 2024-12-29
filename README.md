@@ -18,11 +18,14 @@ This project implements deepfake detection system using a combination of Xceptio
 - **Image Processing**: OpenCV
 - **Visualization**: Matplotlib, Seaborn
 
+## Dataset
+I used 600 videos each class (real and fake) of CelebDF V2, you can access it here [https://github.com/yuezunli/celeb-deepfakeforensics](https://github.com/yuezunli/celeb-deepfakeforensics)
+
 ## 🚀 Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/deepfake-detection.git
+   git clone https://github.com/farhanharvito/DeepfakeDetection
    cd deepfake-detection
    ```
 
